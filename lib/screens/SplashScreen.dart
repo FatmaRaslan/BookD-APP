@@ -14,7 +14,6 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     
-    // الانتقال تلقائياً بعد 3 ثواني إلى MainScreen
     Timer(const Duration(seconds: 5), () {
       Navigator.pushReplacement(
         context,

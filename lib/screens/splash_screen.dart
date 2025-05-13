@@ -14,7 +14,11 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     
+<<<<<<< HEAD:lib/screens/splash_screen.dart
     Timer(const Duration(seconds: 3), () {
+=======
+    Timer(const Duration(seconds: 5), () {
+>>>>>>> 5cfd6858c669343749e63a0b4a18182be0d16bf2:lib/screens/SplashScreen.dart
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(builder: (context) => const MainScreen()),

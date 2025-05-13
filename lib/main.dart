@@ -1,22 +1,20 @@
-import 'package:buttombar/screens/ExploreScreen.dart';
-import 'package:buttombar/screens/FeedScreen.dart';
-import 'package:buttombar/screens/Login.dart';
-import 'package:buttombar/screens/ProfileScreen.dart';
-import 'package:buttombar/screens/SignUp.dart';
-import 'package:buttombar/screens/SplashScreen.dart';
+import 'package:buttombar/screens/explore_screen.dart';
+import 'package:buttombar/screens/feed_screen.dart';
+import 'package:buttombar/screens/log_in.dart';
+import 'package:buttombar/screens/profile_screen.dart';
+import 'package:buttombar/screens/sign_up.dart';
+import 'package:buttombar/screens/splash_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
 
-
-
 class MainScreen extends StatefulWidget {
-  const MainScreen({Key? key}) : super(key: key);
+  const MainScreen({super.key});
   @override
-  _MainScreenState createState() => _MainScreenState();
+  MainScreenState createState() => MainScreenState();
 }
 
-class _MainScreenState extends State<MainScreen> {
+class MainScreenState extends State<MainScreen>{
   int _currentIndex = 0;
 
   final List<Widget> _screens = [
@@ -58,21 +56,21 @@ class _MainScreenState extends State<MainScreen> {
   }
 }
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
     
        return MaterialApp(
-      title: 'تطبيق شاشات متعددة',
-      
-      routes: {
-        
-        '/second': (context) => SignUp(),
-        '/third': (context) => Login(),
-        '/Forth': (context) => FeedScreen(),
-      },
-    
+      title: 'BookD App',
       home: SplashScreen(),
+      routes: {
+        '/signup': (context) => SignUp(),
+        '/login': (context) => Login(),
+        '/main': (context) => const MainScreen(),
+        '/feed': (context) => FeedScreen(),
+        '/explore': (context) => ExploreScreen(),
+        '/profile': (context) => ProfileScreen(),
+      },
     );
   }
 }

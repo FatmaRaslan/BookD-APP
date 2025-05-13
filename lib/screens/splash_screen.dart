@@ -14,13 +14,13 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     
-    // الانتقال تلقائياً بعد 3 ثواني إلى MainScreen
-    Timer(const Duration(seconds: 5), () {
+    Timer(const Duration(seconds: 3), () {
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(builder: (context) => const MainScreen()),
       );
-    });
+    }
+    );
   }
 
   @override
@@ -52,7 +52,7 @@ class _SplashScreenState extends State<SplashScreen> {
               fontFamily: 'WhisperingSignature',
             ),
           ),
-          const SizedBox(height: 30),
+          
           
         ],
       ),

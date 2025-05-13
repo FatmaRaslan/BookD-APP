@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class FeedScreen extends StatelessWidget {
+  const FeedScreen({super.key});
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -24,32 +25,20 @@ class FeedScreen extends StatelessWidget {
         body: Column(
           children: [
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-              child: Container(
-                decoration: BoxDecoration(
-                  border: Border.all(color: Colors.black, width: 1),
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                height: 50,
-                child: Row(
-                  children: [
-                    Image(
-                      image: AssetImage('images/bookimg.png'),
-                      width: 50,
-                      height: 50,
-                    ),
-                    Padding(padding: const EdgeInsets.only(left: 10)),
-                    Text(
-                      'Search book or author...',
-                      style: TextStyle(
-                        fontSize: 20,
-                        color: Color.fromARGB(255, 97, 96, 96),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
+  padding: const EdgeInsets.all(16.0),
+  child: TextField(
+    decoration: InputDecoration(
+      hintText: 'Search for book....',
+      prefixIcon: Icon(Icons.search),
+      border: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(12),
+      ),
+    ),
+    onChanged: (value) {
+      // هنا يمكنكِ إضافة منطق البحث
+    },
+  ),
+),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 5, vertical: 0),
               child: Container(

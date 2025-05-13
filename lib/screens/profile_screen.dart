@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 class ProfileScreen extends StatelessWidget {
+  const ProfileScreen({super.key});
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -166,8 +167,9 @@ class ProfileScreen extends StatelessWidget {
               ),
             ),ElevatedButton(
             child: const Text('Login'),
+            
             onPressed: () {
-              Navigator.pushNamed(context, '/second'); // تسجيل
+              Navigator.pushNamed(context, '/signup'); // تسجيل
             },
           ),
           ],

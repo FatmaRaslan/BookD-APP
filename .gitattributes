@@ -1,0 +1,18 @@
+# خلي GitHub يعتبر بس ملفات Dart في التحليل
+*.dart linguist-detectable=true
+
+# تجاهل بقية اللغات
+*.cpp linguist-detectable=false
+*.c linguist-detectable=false
+*.h linguist-detectable=false
+*.cmake linguist-detectable=false
+*.swift linguist-detectable=false
+*.html linguist-detectable=false
+
+# استبعاد مجلدات الأنظمة الأخرى
+/android/** linguist-vendored
+/ios/** linguist-vendored
+/linux/** linguist-vendored
+/windows/** linguist-vendored
+/macos/** linguist-vendored
+/web/** linguist-vendored

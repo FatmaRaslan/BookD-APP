@@ -1,10 +1,9 @@
 import 'dart:async';
+import 'package:buttombar/screens/log_in.dart';
 import 'package:flutter/material.dart';
-import '../main.dart'; 
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
-
   @override
   State<SplashScreen> createState() => _SplashScreenState();
 }
@@ -13,14 +12,13 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    
+
     Timer(const Duration(seconds: 3), () {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => const MainScreen()),
+        MaterialPageRoute(builder: (context) => const Login()),
       );
-    }
-    );
+    });
   }
 
   @override
@@ -52,8 +50,6 @@ class _SplashScreenState extends State<SplashScreen> {
               fontFamily: 'WhisperingSignature',
             ),
           ),
-          
-          
         ],
       ),
     );
